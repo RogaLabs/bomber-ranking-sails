@@ -25,6 +25,11 @@ Cloud.setup({
       url: '/api/v1/account/update-profile',
       args: ['fullName', 'emailAddress']
     },
+    updateScore: {
+      verb: 'PUT',
+      url: '/api/v1/account/update-score',
+      args: ['victories', 'victoriesAsGolden', 'score']
+    },
     login: {
       verb: 'PUT',
       url: '/api/v1/entrance/login',

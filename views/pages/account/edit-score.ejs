@@ -1,0 +1,31 @@
+<div id="edit-score" v-cloak>
+  <div class="container">
+    <h1>Update score</h1>
+    <hr/>
+    <ajax-form action="updateScore" :syncing.sync="syncing" :cloud-error.sync="cloudError" @submitted="submittedForm()" :handle-parsing="handleParsingForm">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="victories">Victories</label>
+            <input class="form-control" id="victories" name="victories" type="number" v-model.trim="formData.victories">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="victoriesAsGolden">Victories as Golden</label>
+            <input class="form-control" id="victoriesAsGolden" name="victoriesAsGolden" type="number" v-model.trim="formData.victoriesAsGolden">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group text-right">
+            <a class="btn btn-outline-info" href="/account">Cancel</a>
+            <ajax-button type="submit" :syncing="syncing" class="btn btn-dark">Save changes</ajax-button>
+          </div>
+        </div>
+      </div>
+    </ajax-form>
+  </div>
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
