@@ -11,7 +11,6 @@
  */
 
 Cloud.setup({
-  /* eslint-disable */
   methods: {
     confirmEmail: { verb: 'GET', url: '/email/confirm', args: ['token'] },
     logout: { verb: 'GET', url: '/api/v1/account/logout', args: [] },
@@ -56,5 +55,4 @@ Cloud.setup({
       args: ['emailAddress', 'topic', 'fullName', 'message']
     }
   }
-  /* eslint-enable */
 });
